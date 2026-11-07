@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { MediaItem } from "../../core/types";
 
 type Props = {
@@ -10,6 +11,8 @@ type Props = {
 
 export function VideoCard({ item, selected, index, onToggle, onOpen }: Props) {
   const title = item.title || item.id || "Untitled";
+  const [thumbFailed, setThumbFailed] = useState(false);
+  const showThumb = Boolean(item.thumbnail) && !thumbFailed;
 
   return (
     <article
@@ -33,8 +36,15 @@ export function VideoCard({ item, selected, index, onToggle, onOpen }: Props) {
         </button>
 
         <button type="button" className="thumb-btn" onClick={() => onOpen(item)}>
-          {item.thumbnail ? (
-            <img src={item.thumbnail} alt="" loading="lazy" />
+          {showThumb ? (
+            <img
+              src={item.thumbnail!}
+              alt=""
+              loading="lazy"
+              // Beeg/externulls 403 when Referer is localhost; bare request is allowed
+              referrerPolicy="no-referrer"
+              onError={() => setThumbFailed(true)}
+            />
           ) : (
             <div className="thumb-fallback" />
           )}
