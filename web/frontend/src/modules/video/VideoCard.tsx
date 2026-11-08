@@ -17,7 +17,7 @@ export function VideoCard({ item, selected, index, onToggle, onOpen }: Props) {
   return (
     <article
       className={`video-card ${selected ? "is-selected" : ""}`}
-      style={{ animationDelay: `${Math.min(index, 24) * 35}ms` }}
+      style={{ animationDelay: `${Math.min(index, 24) * 30}ms` }}
     >
       <div className="thumb-wrap">
         <button
@@ -41,7 +41,6 @@ export function VideoCard({ item, selected, index, onToggle, onOpen }: Props) {
               src={item.thumbnail!}
               alt=""
               loading="lazy"
-              // Beeg/externulls 403 when Referer is localhost; bare request is allowed
               referrerPolicy="no-referrer"
               onError={() => setThumbFailed(true)}
             />
@@ -56,18 +55,10 @@ export function VideoCard({ item, selected, index, onToggle, onOpen }: Props) {
       <div className="card-body">
         <h3 title={title}>{title}</h3>
         <div className="meta">
+          {item.provider ? <span className="provider-tag">{item.provider}</span> : null}
           {item.views ? <span>{item.views}</span> : null}
           {item.author ? <span>{item.author}</span> : null}
-          {item.provider ? <span className="provider-tag">{item.provider}</span> : null}
         </div>
-        <label className="select-row">
-          <input
-            type="checkbox"
-            checked={selected}
-            onChange={() => onToggle(item)}
-          />
-          <span>Toevoegen aan M3U</span>
-        </label>
       </div>
     </article>
   );

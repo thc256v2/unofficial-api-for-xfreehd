@@ -53,6 +53,7 @@ class ProviderRegistry:
 def build_default_registry() -> ProviderRegistry:
     """Wire built-in providers. External packages can call register() later."""
     from app.providers.beeg import BeegProvider
+    from app.providers.empflix import EMPFlixProvider
     from app.providers.missav import MissAVProvider
     from app.providers.tnaflix import TNAFlixProvider
     from app.providers.xfreehd import XFreeHDProvider
@@ -64,4 +65,5 @@ def build_default_registry() -> ProviderRegistry:
     registry.register(XNXXProvider())
     registry.register(BeegProvider())
     registry.register(TNAFlixProvider())
+    registry.register(EMPFlixProvider())
     return registry
