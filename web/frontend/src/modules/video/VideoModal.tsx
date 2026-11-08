@@ -69,7 +69,7 @@ export function VideoModal({ item, onClose }: Props) {
           {stream ? (
             <video controls poster={data.thumbnail || undefined} src={stream} />
           ) : data.thumbnail ? (
-            <img src={data.thumbnail} alt="" />
+            <img src={data.thumbnail} alt="" referrerPolicy="no-referrer" />
           ) : (
             <div className="thumb-fallback large" />
           )}

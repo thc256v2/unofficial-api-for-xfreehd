@@ -45,6 +45,10 @@ The UI shows a **Bron** selector when more than one provider is registered.
 
 ## Start
 
+**Windows (one double-click):** run `web\start.bat` — opens API + UI in separate consoles and the browser.
+
+Or manually:
+
 Terminal 1 — API (from `web/backend`, using the repo venv):
 
 ```bash
