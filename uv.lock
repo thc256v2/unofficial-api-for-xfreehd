@@ -681,6 +681,21 @@ wheels = [
 ]
 
 [[package]]
+name = "unofficial-api-for-tnaflix"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "curl-cffi" },
+    { name = "eaf-base-api" },
+    { name = "m3u8" },
+    { name = "selectolax" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/6a/49421647036490114a75a1e63f8d7e5781d2c1d868b038eaa432ef8c25f6/unofficial_api_for_tnaflix-1.0.1.tar.gz", hash = "sha256:cef78a3560b02109a56823c6837aa3c7da974300e47efd4aba823fa7cead6cd8", size = 29161, upload-time = "2026-10-27T20:53:38.948Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/21/9e2cf205bb6c3c40a0da52dd22835562a67e64ca0c82ded1dd0ebe89e61f/unofficial_api_for_tnaflix-1.0.1-py3-none-any.whl", hash = "sha256:970ceaf5331a8ba46d9ca55c4c54e615d236e2fe15530f906059c3e44133cc5b", size = 30892, upload-time = "2026-10-27T20:53:37.841Z" },
+]
+
+[[package]]
 name = "unofficial-api-for-xfreehd"
 version = "1.7.4"
 source = { editable = "." }
@@ -700,6 +715,7 @@ gui = [
     { name = "httpx" },
     { name = "unofficial-api-for-beeg" },
     { name = "unofficial-api-for-missav" },
+    { name = "unofficial-api-for-tnaflix" },
     { name = "unofficial-api-for-xnxx" },
 ]
 
@@ -720,6 +736,7 @@ gui = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "unofficial-api-for-beeg", specifier = ">=1.7.4" },
     { name = "unofficial-api-for-missav", specifier = ">=2.6.2" },
+    { name = "unofficial-api-for-tnaflix", specifier = ">=1.0.1" },
     { name = "unofficial-api-for-xnxx", specifier = ">=2.4.4" },
 ]
 
