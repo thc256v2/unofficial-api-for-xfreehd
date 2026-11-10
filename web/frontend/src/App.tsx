@@ -11,21 +11,15 @@ export default function App() {
   const playlist = usePlaylist(meta.exporters);
   const [active, setActive] = useState<MediaItem | null>(null);
 
-  const brand =
-    meta.providers.length > 1
-      ? "Media Browser"
-      : (meta.providers[0]?.name ?? "Media Browser");
-
   return (
     <div className="app">
-      <div className="ambient ambient-a" aria-hidden />
-      <div className="ambient ambient-b" aria-hidden />
+      <div className="stage" aria-hidden />
 
       <header className="hero">
-        <p className="brand">{brand}</p>
-        <h1>Browse & playlist</h1>
+        <p className="brand">REEL</p>
+        <h1>Zoek. Selecteer. Speel af.</h1>
         <p className="lede">
-          Zoek → vink resultaten aan → download een M3U-playlist voor VLC / mpv.
+          Bouw een M3U-playlist uit meerdere bronnen — klaar voor VLC of mpv.
         </p>
         {metaLoading ? (
           <p className="pulse">API verbinden…</p>
@@ -50,7 +44,7 @@ export default function App() {
                 Klaar — {doneCount} resultaat{doneCount === 1 ? "" : "en"}
               </span>
             ) : results.length === 0 ? (
-              <span>Voer een zoekterm in om te beginnen</span>
+              <span className="empty-hint">Nog geen resultaten — typ een zoekterm hierboven</span>
             ) : (
               <span>{results.length} resultaten</span>
             )}
@@ -80,7 +74,7 @@ export default function App() {
           ) : null}
         </div>
 
-        <section className="grid" aria-live="polite">
+        <section className={`grid ${results.length === 0 ? "is-empty" : ""}`} aria-live="polite">
           {results.map((item, index) => (
             <VideoCard
               key={`${item.provider}:${item.url}`}

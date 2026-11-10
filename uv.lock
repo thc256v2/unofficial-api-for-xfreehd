@@ -666,6 +666,21 @@ wheels = [
 ]
 
 [[package]]
+name = "unofficial-api-for-empflix"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "curl-cffi" },
+    { name = "eaf-base-api" },
+    { name = "m3u8" },
+    { name = "selectolax" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fb/41/11d3893e1b45ce2e366c14d26bea3bcfaa97f8e08beed42839448aaa1100/unofficial_api_for_empflix-1.0.1.tar.gz", hash = "sha256:7cf9878028d2e2ffe33916a70c54eb22be3b061fa9299713e468d00021252387", size = 28395, upload-time = "2026-10-27T20:42:45.19Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9a/87/8141dc13ba4422db146b630a2cb0a7279dcee3a0808b37179d3c4d6b338b/unofficial_api_for_empflix-1.0.1-py3-none-any.whl", hash = "sha256:872dd460329ce9c9469027e75e95662386c8d30c45badf6285ef3c96398b0a36", size = 29720, upload-time = "2026-10-27T20:42:43.776Z" },
+]
+
+[[package]]
 name = "unofficial-api-for-missav"
 version = "2.6.2"
 source = { registry = "https://pypi.org/simple" }
@@ -678,6 +693,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ba/ec/ed57a24535d02acb74d14a226e070162d2b67465dcb0659569f737625e42/unofficial_api_for_missav-2.6.2.tar.gz", hash = "sha256:3326e40778be05a8a44dafe29b94e72a0de71806b01b4e803684fe82ccf5bf4d", size = 24299, upload-time = "2026-10-27T20:46:36.177Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7e/a6/065a5460d7195680f79ec0c328d0b72c79b2c8a3239d32413f7319a03f0b/unofficial_api_for_missav-2.6.2-py3-none-any.whl", hash = "sha256:39a7314e23403520b739dfc8c7e45b59291cccfe462c97195dfd06ed37c6a30a", size = 25021, upload-time = "2026-10-27T20:46:34.638Z" },
+]
+
+[[package]]
+name = "unofficial-api-for-tnaflix"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "curl-cffi" },
+    { name = "eaf-base-api" },
+    { name = "m3u8" },
+    { name = "selectolax" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/6a/49421647036490114a75a1e63f8d7e5781d2c1d868b038eaa432ef8c25f6/unofficial_api_for_tnaflix-1.0.1.tar.gz", hash = "sha256:cef78a3560b02109a56823c6837aa3c7da974300e47efd4aba823fa7cead6cd8", size = 29161, upload-time = "2026-10-27T20:53:38.948Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/21/9e2cf205bb6c3c40a0da52dd22835562a67e64ca0c82ded1dd0ebe89e61f/unofficial_api_for_tnaflix-1.0.1-py3-none-any.whl", hash = "sha256:970ceaf5331a8ba46d9ca55c4c54e615d236e2fe15530f906059c3e44133cc5b", size = 30892, upload-time = "2026-10-27T20:53:37.841Z" },
 ]
 
 [[package]]
@@ -699,7 +729,9 @@ dev = [
 gui = [
     { name = "httpx" },
     { name = "unofficial-api-for-beeg" },
+    { name = "unofficial-api-for-empflix" },
     { name = "unofficial-api-for-missav" },
+    { name = "unofficial-api-for-tnaflix" },
     { name = "unofficial-api-for-xnxx" },
 ]
 
@@ -719,7 +751,9 @@ dev = [
 gui = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "unofficial-api-for-beeg", specifier = ">=1.7.4" },
+    { name = "unofficial-api-for-empflix", specifier = ">=1.0.1" },
     { name = "unofficial-api-for-missav", specifier = ">=2.6.2" },
+    { name = "unofficial-api-for-tnaflix", specifier = ">=1.0.1" },
     { name = "unofficial-api-for-xnxx", specifier = ">=2.4.4" },
 ]
 

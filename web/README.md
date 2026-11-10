@@ -28,6 +28,8 @@ web/frontend/src/
 | `missav` | [`unofficial-api-for-missav`](https://github.com/EchterAlsFake/unofficial-api-for-missav) | HLS / m3u8 (via lokale proxy) |
 | `xnxx` | [`unofficial-api-for-xnxx`](https://github.com/EchterAlsFake/unofficial-api-for-xnxx) | HLS / m3u8 |
 | `beeg` | [`unofficial-api-for-beeg`](https://github.com/EchterAlsFake/unofficial-api-for-beeg) + externulls WS search | Keyword → tag → videos (max 100); URL/ID lookup also works |
+| `tnaflix` | [`unofficial-api-for-tnaflix`](https://github.com/EchterAlsFake/unofficial-api-for-tnaflix) | RAW / MP4; sort + date filters |
+| `empflix` | [`unofficial-api-for-empflix`](https://github.com/EchterAlsFake/unofficial-api-for-empflix) | RAW / MP4; sort + date filters |
 
 The UI shows a **Bron** selector when more than one provider is registered.
 
